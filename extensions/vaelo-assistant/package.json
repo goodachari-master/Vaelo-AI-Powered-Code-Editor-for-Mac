@@ -1,0 +1,111 @@
+{
+	"name": "vaelo-assistant",
+	"displayName": "%displayName%",
+	"description": "%description%",
+	"version": "0.6.1",
+	"publisher": "vaelo",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.100.0"
+	},
+	"main": "./extension.js",
+	"activationEvents": [
+		"onView:vaelo.chat"
+	],
+	"capabilities": {
+		"untrustedWorkspaces": {
+			"supported": true
+		}
+	},
+	"contributes": {
+		"commands": [
+			{
+				"command": "preri.open",
+				"title": "%preri.open.title%"
+			},
+			{
+				"command": "preri.selectModel",
+				"title": "%preri.selectModel.title%"
+			},
+			{
+				"command": "preri.ask",
+				"title": "%preri.ask.title%"
+			},
+			{
+				"command": "preri.propose",
+				"title": "%preri.propose.title%"
+			},
+			{
+				"command": "preri.apply",
+				"title": "%preri.apply.title%"
+			},
+			{
+				"command": "vaelo.openProject",
+				"title": "%vaelo.openProject.title%"
+			},
+			{
+				"command": "vaelo.clone",
+				"title": "%vaelo.clone.title%"
+			},
+			{
+				"command": "vaelo.theme",
+				"title": "%vaelo.theme.title%"
+			}
+		],
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "vaelo",
+					"title": "Preri",
+					"icon": "media/preri-activity.svg"
+				}
+			]
+		},
+		"views": {
+			"vaelo": [
+				{
+					"type": "webview",
+					"id": "vaelo.chat",
+					"name": "Preri"
+				}
+			]
+		},
+		"menus": {
+			"editor/context": [
+				{
+					"command": "preri.ask",
+					"group": "preri"
+				},
+				{
+					"command": "preri.propose",
+					"group": "preri"
+				}
+			]
+		},
+		"configuration": {
+			"title": "Preri",
+			"properties": {
+				"preri.ollamaUrl": {
+					"type": "string",
+					"default": "http://127.0.0.1:11434",
+					"scope": "machine",
+					"description": "Local Ollama address. Local HTTP loopback addresses only."
+				}
+			}
+		},
+		"themes": [
+			{
+				"label": "VAELO Forest",
+				"uiTheme": "vs-dark",
+				"path": "./themes/forest.json"
+			}
+		],
+		"configurationDefaults": {
+			"workbench.colorTheme": "VAELO Forest"
+		}
+	},
+	"scripts": {
+		"test": "node --test test/*.test.cjs"
+	},
+	"icon": "media/vaelo.png"
+}

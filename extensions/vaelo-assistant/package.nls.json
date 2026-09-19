@@ -1,0 +1,12 @@
+{
+	"displayName": "Preri — VAELO Coding AI",
+	"description": "Switchable local coding models, API provider connections, GGUF imports and the VAELO Forest theme.",
+	"preri.open.title": "Preri: Open Assistant",
+	"preri.selectModel.title": "Preri: Activate Model",
+	"preri.ask.title": "Preri: Ask About Selected Code",
+	"preri.propose.title": "Preri: Propose File Edit",
+	"preri.apply.title": "Preri: Apply Reviewed Edit",
+	"vaelo.openProject.title": "VAELO: Open Folder",
+	"vaelo.clone.title": "VAELO: Clone GitHub Repository",
+	"vaelo.theme.title": "VAELO: Apply Forest Theme"
+}

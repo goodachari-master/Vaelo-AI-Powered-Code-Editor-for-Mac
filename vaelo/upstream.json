@@ -1,0 +1,19 @@
+{
+  "repository": "https://github.com/microsoft/vscode.git",
+  "commit": "8e35945bae3f2b0b3d0276963281180f1ce10cb0",
+  "version": "1.139.0",
+  "node": "24.18.0",
+  "source": "full shallow clone including tracked LFS files",
+  "modifications": [
+    "product.json",
+    "resources/darwin/code.icns",
+    "resources/win32/code.ico",
+    "resources/linux/code.png",
+    "extensions/vaelo-assistant",
+    "scripts/vaelo.cjs",
+    "vaelo/",
+    "VAELO_START_HERE.md"
+  ],
+  "editor_source_changes": false,
+  "vaelo_version": "0.6.0"
+}
